@@ -1,0 +1,18 @@
+# Git aliases.
+alias g='git'
+alias gst='git status'
+alias gc='git commit'
+alias gp='git push'
+alias gcam='git commit -am'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+
+
+alias sshp="sshpass -e ssh"
+alias docker="podman"
+alias vim="nvim"
+alias vi="nvim"
+
+# Kubernetes aliases
+alias k="kubectl"
+alias kx="kubectx"
+alias kn="kubens"
