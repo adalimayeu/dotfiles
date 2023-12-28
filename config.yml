@@ -1,6 +1,8 @@
 ---
 dotfiles_repo: 'https://github.com/adalimayeu/dotfiles.git'
 dotfiles_repo_version: master
+dotfiles_repo_local_destination: '~/.dotfiles_source'
+
 dotfiles_files:
   - .oh-my-zsh/themes/oxide.zsh-theme
   - .aliases
