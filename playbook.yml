@@ -1,0 +1,25 @@
+#!/usr/bin/env ansible-playbook
+
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Recursively find files in 'home' directory
+      ansible.builtin.find:
+        paths: home/
+        recurse: true
+      register: output
+
+    - name: Make sure all directories exist
+      ansible.builtin.file:
+        path: '{{ "~/" + item.path | regex_replace("^home/", "") | dirname }}'
+        state: directory
+        mode: '0755'
+      loop: '{{ output.files }}'
+
+    - name: Create a symbolic link
+      ansible.builtin.file:
+        src: '{{ lookup("env", "PWD") + "/" + item.path }}'
+        dest: '{{ "~/" + item.path | regex_replace("^home/", "") }}'
+        state: link
+      loop: '{{ output.files }}'
