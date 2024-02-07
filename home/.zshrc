@@ -16,3 +16,5 @@ HIST_STAMPS="%d/%m/%y %T"
 for file in ~/.zsh.d/*; do
   [ -f $file ] && [[ ${file:0:1} != "_" ]] && source $file
 done
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -8,6 +8,7 @@
       ansible.builtin.find:
         paths: home/
         recurse: true
+        hidden: true
       register: output
 
     - name: Make sure all directories exist
