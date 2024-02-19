@@ -24,3 +24,4 @@
         dest: '{{ "~/" + item.path | regex_replace("^home/", "") }}'
         state: link
       loop: '{{ output.files }}'
+
