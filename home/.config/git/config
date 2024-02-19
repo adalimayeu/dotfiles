@@ -1,6 +1,7 @@
 [user]
   name = Aliaksandr Dalimayeu
-  email = adalimayeu@mac.com
+  email = adalimayeu@gmail.com
+  signingkey = ~/.ssh/id_rsa.pub
 [core]
   editor = vi
   excludesfile = ~/.gitignore
