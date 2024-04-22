@@ -22,3 +22,7 @@ knownrm() {
    sed -i '' "$1d" ~/.ssh/known_hosts
  fi
 }
+
+jwtdec() {
+  echo "$1" | jq -R 'split(".") | select(length > 0) | .[0],.[1] | @base64d | fromjson'
+}

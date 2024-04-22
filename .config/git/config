@@ -1,7 +1,7 @@
 [user]
   name = Aliaksandr Dalimayeu
   email = adalimayeu@gmail.com
-  signingkey = ~/.ssh/id_rsa.pub
+  # signingkey = ~/.ssh/id_rsa.pub
 [gpg]
   format = ssh
 [core]
